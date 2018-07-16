@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :posts, only: %i(create destroy)
-  resource :users, only: %i(show)
+  resources :users, only: %i(show index)
   resources :groups do
     resources :posts, only: %i(create destroy)
     resource :comments, only: %i(create)

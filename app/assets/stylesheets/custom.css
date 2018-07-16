@@ -67,3 +67,12 @@ img.image {
   width: 80%;
   margin: 10px 122px;
 }
+
+img.img-circle {
+  width: 69px;
+}
+
+a.li-droppdown {
+  width: 158px;
+  margin-bottom: 3px;
+}

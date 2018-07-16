@@ -2,8 +2,15 @@
   <div id="<%= "post-#{post.id}" %>">
   <div class="well">
     <div class="to-group">
-      <%= post.user.name %><i class="glyphicon glyphicon-play"></i>
-      <%= link_to group.name, group %>
+      <% if post.user.join?(group) %>
+        <%= gravatar_for post.user %> <%= post.user.name %>
+        <i class="glyphicon glyphicon-play"></i>
+        <%= link_to group.name, group %>
+      <% else %>
+        <%= gravatar_for post.user %> <del><%= post.user.name %></del>
+        <i class="glyphicon glyphicon-play"></i>
+        <%= link_to group.name, group %>
+      <% end %>
     </div>
     <div class="media comment-post">
       <div class="media-body">
@@ -35,7 +42,6 @@
                   data: {confirm: t(".sure")}, remote: true %>
             <% end %>
           <% end %>
-          <p class="text-right"> <%= t ".by" %> <%= post.user.name %></p>
         </ul>
       </div>
     </div>
