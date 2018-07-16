@@ -2,13 +2,11 @@
   <h1 class="tittle"><%= t ".registration" %>
     <i class="fa fa-registered"></i>
   </h1>
+  <br>
     <%= form_for resource, as: resource_name,
       url: registration_path(resource_name) do |f| %>
       <%= devise_error_messages! %>
   <div class="sign-up">
-     <h3 class="tittle reg"><%= t ".info" %>
-        <i class="fa fa-user"></i>
-      </h3>
     <div class="sign-u">
 
       <div class="sign-up1">
