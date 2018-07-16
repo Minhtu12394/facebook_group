@@ -3,6 +3,9 @@
     <div class="media comment-post">
       <div class="media-body">
         <h4 class="media-heading"></h4>
+        <p class="text-left">
+          <%= gravatar_for post.user %> <%= post.user.name %>
+        </p>
         <p><%= post.content %></p>
         <% if post.picture? %>
           <%= image_tag (post.picture.url), class: "post-image" %>
@@ -30,7 +33,7 @@
             data: {confirm: t(".sure")}, remote: true %>
             <% end %>
           <% end %>
-          <p class="text-right"> <%= t ".by" %> <%= post.user.name %></p>
+
         </ul>
       </div>
     </div>
