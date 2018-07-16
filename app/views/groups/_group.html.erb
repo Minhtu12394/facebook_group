@@ -8,12 +8,12 @@
             <div class="pull-right">
               <% if signed_in? && current_user.id == group.creator_id %>
                 <%= link_to edit_group_path(group), remote: true do %>
-                <span class="glyphicon glyphicon-edit"></span>
+                <span class="fa fa-pencil-square-o"></span>
                 <% end %>
                 |
                 <%= link_to group_path(group), method: :delete,
                   data: {confirm: t(".sure")}, remote: true do %>
-                  <span class="glyphicon glyphicon-remove"></span>
+                  <span class="fa fa-trash"></span>
                   <% end %>
               <% end %>
             </div>

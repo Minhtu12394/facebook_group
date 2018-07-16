@@ -4,11 +4,11 @@
     <div class="to-group">
       <% if post.user.join?(group) %>
         <%= gravatar_for post.user %> <%= post.user.name %>
-        <i class="glyphicon glyphicon-play"></i>
+        <i class="fa fa-play"></i>
         <%= link_to group.name, group %>
       <% else %>
         <%= gravatar_for post.user %> <del><%= post.user.name %></del>
-        <i class="glyphicon glyphicon-play"></i>
+        <i class="fa fa-play"></i>
         <%= link_to group.name, group %>
       <% end %>
     </div>

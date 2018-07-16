@@ -19,17 +19,20 @@ gem "kaminari"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.6"
 gem "sass-rails", "~> 5.0"
-gem "sqlite3"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "carrierwave", "1.2.2"
 gem "mini_magick", "4.7.0"
+gem "rspec-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
   gem "selenium-webdriver"
   gem "sqlite3"
+  gem "capybara", "~> 2.13"
+  gem "factory_girl_rails"
+  gem "faker"
 end
 
 group :development do
@@ -41,6 +44,12 @@ end
 
 group :production do
   gem "pg", "0.20.0"
+end
+
+group :test do
+  gem "shoulda-matchers", "~> 3.1"
+  gem "database_cleaner"
+  gem "rspec-rails"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

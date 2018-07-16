@@ -28,7 +28,7 @@ class User < ApplicationRecord
   end
 
   def is_group_creator? group
-    self.id != group.creator_id
+    self.id == group.creator_id
   end
 
   private
