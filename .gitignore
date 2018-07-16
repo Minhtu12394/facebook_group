@@ -21,9 +21,6 @@ config/master.key
 
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
-config/application.yml
-config/database.yml
-config/secrets.yml
 .env
 
 ## Environment normalization:
