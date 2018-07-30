@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'f099a06782fdb72c9203683059b3fc740c41e6f458f05a4fb4695cb353397a4473bd8b64b468c7513a846f7822908edf017582523af282f794631a7ed00bdfda'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -48,7 +48,7 @@ Devise.setup do |config|
   # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
   # The same considerations mentioned for authentication_keys also apply to request_keys.
   # config.request_keys = []
-
+  config.secret_key = '10f2331e7e72131f3cabaae280de69e0444b5881bc4574b0ffe46c615e0804e3c78fbdfdff721ee044226f19281fec16733e081887362ceabff5585b3a05153a'
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
