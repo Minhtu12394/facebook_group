@@ -6,7 +6,7 @@ class Post < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  validates :content, presence: true
+  validates :content, presence: true, length: {maximum: Settings.post_contetn_maximum_lenght}
 
   mount_uploader :picture, PictureUploader
 
